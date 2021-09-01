@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello world</h1>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-messaging.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAM6EsFyckJbSHpBp_HcdvU_GA3VwndSBE",
+            authDomain: "reusable-module.firebaseapp.com",
+            projectId: "reusable-module",
+            storageBucket: "reusable-module.appspot.com",
+            messagingSenderId: "180397434536",
+            appId: "1:180397434536:web:924540eaf4bb4664a7c49d",
+            measurementId: "G-5JL5XJMJ2Q"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const messaging = firebase.messaging();
+        messaging.onMessage(function (payload) {
+            console.log("on Message", payload);
+        });
+
+    </script>
+    <script src="firebase.js"></script>
+</body>
+
+</html>
